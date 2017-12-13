@@ -3,10 +3,10 @@ public class Serial_number_of_point
 {
 	public static void main(String args[]) 
 	{
-		 int x = 2;
-		 int y = 4;
+	   int x = 2;
+           int y = 4;
 
-		 System.out.println("Serial number of point on the Spiral which has coordinates ("+ x +"," + y + ") is : " + solution( x , y) );
+	   System.out.println("Serial number of point on the Spiral which has coordinates ("+ x +"," + y + ") is : " + solution( x , y) );
 	}
 	
 	public static int solution(int X, int Y) 
@@ -28,38 +28,38 @@ public class Serial_number_of_point
 	
 	private static int[] getNextPoint(int X, int Y) 
 	{
-	        int[] nextPoint = new int[2];
-	        nextPoint[0] = X;
-          nextPoint[1] = Y;
+	     int[] nextPoint = new int[2];
+	     nextPoint[0] = X;
+             nextPoint[1] = Y;
             
-	        // Top left quadrant
-		      if (X <= 0 && Y >= 0){
-	        	if (Math.abs(X) < Math.abs(Y))
-	              nextPoint[0] += 1;
-	          else 
-	              nextPoint[1] += 1;
-	        } //Top right quadrant
-		      else if (X >= 0 && Y >= 0){
-	            if (Math.abs(X) < Math.abs(Y))
-	                nextPoint[0] += 1;
-	            else
-	                nextPoint[1] -= 1;
-	        } //Lower right quadrant
-	        else if (X >= 0 && Y <= 0){
-	            if (Math.abs(X) <= Math.abs(Y))
-	                nextPoint[0] -= 1;
-	            else 
-	                nextPoint[1] -= 1;
-	        } //Lower left quadrant
-	        else if (X <= 0 && Y <= 0){
-	            if (Math.abs(X) < Math.abs(Y))
-	                nextPoint[0] -= 1;
-	            else 
-	                nextPoint[1] += 1;
-	        }
+	     // Top left quadrant
+             if (X <= 0 && Y >= 0){
+	        if (Math.abs(X) < Math.abs(Y))
+	             nextPoint[0] += 1;
+	        else 
+	             nextPoint[1] += 1;
+	     } //Top right quadrant
+	     else if (X >= 0 && Y >= 0){
+	        if (Math.abs(X) < Math.abs(Y))
+	             nextPoint[0] += 1;
+	        else
+	             nextPoint[1] -= 1;
+	     } //Lower right quadrant
+	     else if (X >= 0 && Y <= 0){
+	        if (Math.abs(X) <= Math.abs(Y))
+	             nextPoint[0] -= 1;
+	        else 
+	             nextPoint[1] -= 1;
+	     } //Lower left quadrant
+	     else if (X <= 0 && Y <= 0){
+	        if (Math.abs(X) < Math.abs(Y))
+	             nextPoint[0] -= 1;
+	        else 
+	             nextPoint[1] += 1;
+	     }
 	         
-	        return nextPoint;
-  }
+       	     return nextPoint;
+        }
 	   
 }
 
